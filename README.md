@@ -1,5 +1,7 @@
 ## jaxb-facets-issue29
 
+### For building
+
 For building it, you may have to change this : 
 
         <repository>
@@ -11,3 +13,6 @@ For building it, you may have to change this :
 ( This is a local repository you won't have access to )
 
 
+### Error message
+
+You can see a full console output inside file errorMessage.txt
