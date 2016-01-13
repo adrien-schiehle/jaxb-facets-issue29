@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Spring Boot CLI + Javascript</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="../assets/js/jquery-2.1.4.min.js"
+            th:src="@{/assets/js/jquery-2.1.4.min.js}" />
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('div').animate({
+                fontSize: '48px'
+            }, "slow");
+        });
+    </script>
+</head>
+<body>
+    <h1 th:text="'Hello, ' + ${name} + '!'" >Hello John</h1>
+
+    <div th:if="${identified} == true">You have been identified</div>
+    <div th:if="${identified} == false">Who are you ?</div>
+</body>
+</html>

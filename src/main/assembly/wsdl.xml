@@ -1,0 +1,14 @@
+<!-- Builds a jar file containing WSDL + XSD from this service -->
+<assembly>
+    <id>wsdl</id>
+    <formats>
+        <format>jar</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}/generated/wsdl</directory>
+            <outputDirectory>/wsdl</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>

@@ -1,0 +1,27 @@
+server:
+    port: 8080
+    address: 0.0.0.0
+
+identification:
+    method: withPwd
+
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show_sql: true
+    hibernate:
+      # Permet de creer toutes les tables lors de l'initialisation de la connexion
+      ddl-auto: create-drop
+      naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+    properties:
+      hibernate:
+        cache:
+          use_second_level_cache: false
+          use_query_cache: false
+        temp:
+          use_jdbc_metadata_defaults: false
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:test;DB_CLOSE_ON_EXIT=FALSE;INIT=RUNSCRIPT FROM 'classpath:scripts/createSchemas.sql'
+    username: sa
+    password:
